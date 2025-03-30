@@ -6,6 +6,7 @@
 #include <memory>
 #include <stdexcept>
 #include <algorithm>
+#include "fileSystemApp.h"
 using namespace std;
 
 class FileSystem {
