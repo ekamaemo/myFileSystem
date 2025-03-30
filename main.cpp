@@ -9,6 +9,14 @@
 #include "fileSystemApp.h"
 using namespace std;
 
+const QString FileSystem::FS_FILE = "qt_filesystem.dat";
+
+FileSystem::FileSystem(QObject *parent) : QObject(parent)
+{
+    if(!QFile::exists(FS_FILE)) {
+        initialize();
+    }
+}
 class FileSystem {
 private:
     static constexpr int FILENAME_LENGTH = 20;
